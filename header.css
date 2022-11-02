@@ -1,0 +1,86 @@
+.color-picker > fieldset{
+    border: 0;
+    display: flex;
+    gap: 2rem;
+    width: fit-content;
+    background: #fff;
+    padding: 0.8rem 1.8rem;
+    border-radius: 0 0 1rem 1rem;
+    margin-inline: auto;
+}
+.color-picker input[type="radio"]{
+    appearance: none;
+    width: 1.5rem;
+    height: 1.5rem;
+    border: 3px solid var(--radio-color, currentColor);
+    border-radius: 50%;
+}
+.color-picker input[type="radio"]:checked{
+    background-color: var(--radio-color);
+}
+
+
+.color-picker input[type="radio"]#light{
+    --radio-color: rgb(153, 148, 148);
+}
+.color-picker input[type="radio"]#dark{
+    --radio-color: hsl(0, 0%, 12%);
+}
+.color-picker input[type="radio"]#blue{
+    --radio-color: hsl(217, 80%, 52%);
+}
+.color-picker input[type="radio"]#disco{
+    animation: disco 2s infinite;
+    --clr 
+}
+
+
+
+
+:root:has(#light:checked){
+    --clr-body-bg: hsl(0, 0%, 90%);
+    --clr-text: hsl(0 0% 15%);
+
+    --clr-grid-bg: white;
+    --border-top: black;
+    --grid-max-width: 150px;
+
+}
+:root:has(#blue:checked){
+    --clr-body-bg: hsl(217, 80%, 52%);
+    --clr-text: rgb(67, 249, 255);
+
+    --clr-grid-bg: rgb(11, 106, 129);
+    --border-top: var(--clr-text);
+}
+:root:has(#disco:checked){
+    --clr-body-bg: hsl(217, 80%, 52%);
+    --clr-text: rgb(67, 249, 255);
+
+    --clr-grid-bg: rgb(11, 106, 129);
+    --border-top: var(--clr-text);
+
+    animation: party 2s infinite;
+}
+@keyframes party{
+    10%{--clr-body-bg: blue; --clr-text: greenyellow; --clr-grid-bg: red;}
+    20%{--clr-body-bg: greenyellow; --clr-text:rgb(21, 177, 52); --clr-grid-bg: blue;}
+    30%{--clr-body-bg: rgb(21, 177, 52); --clr-text: rgb(252, 0, 42); --clr-grid-bg: greenyellow;}
+    40%{--clr-body-bg: rgb(252, 0, 42); --clr-text: rgb(83, 197, 17); --clr-grid-bg: blue;}
+    50%{--clr-body-bg: rgb(83, 197, 17); --clr-text: yellow; --clr-grid-bg: red;}
+    60%{--clr-body-bg: yellow; --clr-text: red; --clr-grid-bg: purple;}
+    70%{--clr-body-bg: red; --clr-text: purple; --clr-grid-bg: rgb(83, 197, 17);}
+    80%{--clr-body-bg: purple; --clr-text: yellow; --clr-grid-bg: rgb(21, 177, 52);}
+    100%{--clr-body-bg: yellow; --clr-text: blue; --clr-grid-bg: red;}
+}
+@keyframes disco{
+    10%{--radio-color: blue;}
+    20%{--radio-color: greenyellow;}
+    30%{--radio-color: rgb(21, 177, 52);}
+    40%{--radio-color: rgb(252, 0, 42);}
+    50%{--radio-color: rgb(83, 197, 17);}
+    60%{--radio-color: yellow;}
+    70%{--radio-color: red;}
+    80%{--radio-color: purple;}
+    100%{--radio-color: yellow;}
+}

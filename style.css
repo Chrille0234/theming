@@ -1,0 +1,78 @@
+@import url(header.css);
+:root{
+    --clr-body-bg: hsl(0, 0%, 12%);
+    --clr-text: rgb(173, 169, 169);
+
+    --clr-grid-bg: rgb(88, 68, 68);
+    --border-top: var(--clr-text);
+    --grid-max-width: 150px;
+
+
+
+
+}
+body{
+    margin-top: 0;
+    font-family: system-ui, sans-serif;
+    font-size: 1.25rem;
+    line-height: 1.5;
+    background-color: var(--clr-body-bg);
+}
+
+h1, h2, h3 {
+    text-align: center;
+    color: var(--clr-text);
+    line-height: 1.1;
+}
+p{
+    color: var(--clr-text);
+    font-size: 0.9em;
+}
+.top-text{
+    width: 50%; 
+    margin-right:auto; 
+    margin-left: auto;
+}
+@media all and (max-width: 700px){
+    .top-text{
+        width: 90%; 
+        margin-right:auto; 
+        margin-left: auto;
+    }
+    .grid-child{
+        position: relative;
+        right: 0%;
+    }
+}
+@media all and (max-width: 450px){
+    .bottom-text .grid-child{
+        position: relative;
+        right: 10%;
+    }
+}
+.grid-parent{
+    margin: auto;
+    width: 50%;
+    display: grid;
+    gap: 10px;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    grid-template-rows: repeat(auto-fit, minmax(250px, 1fr));
+}
+.grid-child {
+    background-color: var(--clr-grid-bg);
+    padding: 5px;
+    border-radius: 10%;
+    border-top: 5px var(--border-top) solid;
+
+}
+
+
+.sr-only{
+    clip: rect(0 0 0 0);
+    clip-path: inset(50%);
+    height: 1px;
+    overflow: hidden;
+    position: absolute;
+    white-space: nowrap;
+    width: 1px;
+}
