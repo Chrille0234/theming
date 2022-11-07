@@ -7,6 +7,7 @@
     padding: 0.8rem 1.8rem;
     border-radius: 0 0 1rem 1rem;
     margin-inline: auto;
+    margin-top: 0%;
 }
 .color-picker input[type="radio"]{
     appearance: none;
@@ -44,7 +45,6 @@
     --clr-grid-bg: white;
     --border-top: black;
     --grid-max-width: 150px;
-
 }
 :root:has(#blue:checked){
     --clr-body-bg: hsl(217, 80%, 52%);

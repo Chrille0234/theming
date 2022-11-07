@@ -1,0 +1,34 @@
+.grid-parent{
+    margin: auto;
+    width: 50%;
+    display: grid;
+    gap: 10px;
+    grid-template-rows: repeat(auto-fit, minmax(250px, 1fr));
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    
+}
+.grid-child{
+    border-top: 5px var(--border-top) solid;
+    border-radius: 10%;
+    background-color: var(--clr-grid-bg);
+    opacity: 80%;
+}
+/* Mobile friendly settings */
+@media all and (max-width: 700px){
+    .top-text{
+        width: 90%; 
+        margin-right:auto; 
+        margin-left: auto;
+    }
+    .grid-child{
+        position: relative;
+        right: 0%;
+    }
+}
+@media all and (max-width: 850px){
+    .bottom-text .grid-child{
+        position: relative;
+        right: 10%;
+    }
+
+}

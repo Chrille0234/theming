@@ -1,4 +1,7 @@
+@import url(grid.css);
 @import url(header.css);
+@import url(headerSelectedFont.css);
+
 :root{
     --clr-body-bg: hsl(0, 0%, 12%);
     --clr-text: rgb(173, 169, 169);
@@ -6,11 +9,15 @@
     --clr-grid-bg: rgb(88, 68, 68);
     --border-top: var(--clr-text);
     --grid-max-width: 150px;
-
-
-
-
+    
+    --dark-opacity: 0%;
+    --light-opacity: 0%;
+    --blue-opacity: 0%;
+    --disco-opacity: 0%;
 }
+
+
+/* general */
 body{
     margin-top: 0;
     font-family: system-ui, sans-serif;
@@ -33,40 +40,10 @@ p{
     margin-right:auto; 
     margin-left: auto;
 }
-@media all and (max-width: 700px){
-    .top-text{
-        width: 90%; 
-        margin-right:auto; 
-        margin-left: auto;
-    }
-    .grid-child{
-        position: relative;
-        right: 0%;
-    }
-}
-@media all and (max-width: 450px){
-    .bottom-text .grid-child{
-        position: relative;
-        right: 10%;
-    }
-}
-.grid-parent{
-    margin: auto;
-    width: 50%;
-    display: grid;
-    gap: 10px;
-    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-    grid-template-rows: repeat(auto-fit, minmax(250px, 1fr));
-}
-.grid-child {
-    background-color: var(--clr-grid-bg);
-    padding: 5px;
-    border-radius: 10%;
-    border-top: 5px var(--border-top) solid;
-
-}
 
 
+
+/* Don't change. For screen reader users */
 .sr-only{
     clip: rect(0 0 0 0);
     clip-path: inset(50%);

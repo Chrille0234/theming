@@ -1,0 +1,36 @@
+.chosenColor{
+    color: black;
+    font-size: 0.8em;
+    font-weight: bold;
+
+    position: absolute;
+    left: 50%;
+    top: -0.8%;
+    transform: translate(-50%, -50%);
+    
+}
+:root:has(#dark:checked){
+    --dark-opacity: 100%;
+}
+:root:has(#light:checked){
+    --light-opacity: 100%;
+}
+:root:has(#blue:checked){
+    --blue-opacity: 100%;
+}
+:root:has(#disco:checked){
+    --disco-opacity: 100%;
+}
+.darkActive{
+    opacity: var(--dark-opacity);
+}
+.lightActive{
+    opacity: var(--light-opacity);
+}
+
+.blueActive{
+    opacity: var(--blue-opacity);
+}
+.discoActive{
+    opacity: var(--disco-opacity);
+}
